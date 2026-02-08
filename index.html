@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="main-header">
+
+  <div class="logo l-h">Quiz.
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </div>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="html-level.html">HTML</a>
+    <a href="css-level.html">CSS</a>
+    <a href="js-level.html">JavaScript</a>
+  </nav>
+
+  <div class="auth-buttons">
+    <span id="user-name"></span>
+    <a href="#" id="logoutBtn" class="btn login">Logout</a>
+    <a href="signup.html" id="signupBtn" class="btn signup">Sign Up</a>
+    <a href="login.html" id="loginBtn" class="btn login">Login</a>
+  </div>
+
+</header>
+
+
+<section class="header">
+  <h1>Welcome to Our Quiz System</h1>
+  <p>Test Your Programming Skills</p>
+</section>
+
+<section class="quiz-container">
+  <div class="quiz-card">
+    <h2>HTML Quiz</h2>
+    <p>Structure & Tags</p>
+    <a href="html-level.html">Start</a>
+  </div>
+
+  <div class="quiz-card">
+    <h2>CSS Quiz</h2>
+    <p>Design & Styling</p>
+    <a href="css-level.html">Start</a>
+  </div>
+
+  <div class="quiz-card">
+    <h2>JavaScript Quiz</h2>
+    <p>Logic & Programming</p>
+    <a href="js-level.html">Start</a>
+  </div>
+</section>
+
+<footer>© 2026 CodeCracker</footer>
+
+<script src="js/auth.js"></script>
+</body>
+</html>

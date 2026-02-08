@@ -1,0 +1,476 @@
+/* =========================
+   GLOBAL RESET & THEME
+========================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(120deg,#0f2027,#203a43,#2c5364);
+  color:#fff;
+}
+
+/* =========================
+   HEADER / NAVBAR
+========================= */
+.main-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 40px;
+  background:#ffffff10;
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #ffffff20;
+  flex-wrap:wrap;
+  gap:15px;
+  padding: 15px 25px;
+}
+
+.l-h{
+  display: flex;
+}
+
+.logo{
+  font-size:2.5rem;
+  font-weight:700;
+  letter-spacing:2px;
+  color:#00e0ff;
+}
+
+.hamburger{
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  color: white;
+  margin-left: auto;
+  margin-top: 10px;
+}
+
+.nav-links{
+  display:flex;
+  gap:25px;
+  flex-wrap:wrap;
+}
+
+.nav-links a{
+  color:#fff;
+  text-decoration:none;
+  font-size:16px;
+  position:relative;
+}
+
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:0%;
+  height:3px;
+  background:#00e0ff;
+  transition:.3s;
+}
+
+.nav-links a:hover::after{
+  width:100%;
+}
+
+.auth-buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.btn{
+  padding:9px 22px;
+  border-radius:25px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+  cursor:pointer;
+}
+
+.signup{
+  border:1px solid #00e0ff;
+  color:#00e0ff;
+}
+
+.signup:hover{
+  background:#00e0ff;
+  color:#000;
+}
+
+.login{
+  background:#00e0ff;
+  color:#000;
+}
+
+.login:hover{
+  background:#00bcd4;
+}
+
+/* =========================
+   HOME HERO SECTION
+========================= */
+.header{
+  text-align:center;
+  padding:50px 20px 20px;
+  margin-top: 50px;
+}
+
+.header h1{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+.header p{
+  font-size:18px;
+  opacity:0.85;
+}
+
+/* =========================
+   QUIZ CARDS (HOME)
+========================= */
+.quiz-container{
+  max-width:1100px;
+  margin:40px auto;
+  padding:0 30px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.quiz-card{
+  background:#ffffff14;
+  backdrop-filter:blur(10px);
+  border-radius:20px;
+  padding:30px;
+  text-align:center;
+  border:1px solid #ffffff22;
+  transition:0.4s;
+}
+
+.quiz-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.35);
+}
+
+.quiz-card h2{
+  font-size:26px;
+  margin-bottom:10px;
+}
+
+.quiz-card p{
+  opacity:0.8;
+  margin-bottom:20px;
+}
+
+.quiz-card a{
+  display:inline-block;
+  padding:12px 30px;
+  background:#00e0ff;
+  color:#000;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.quiz-card a:hover{
+  background:#00bcd4;
+}
+
+/* =========================
+   QUIZ LEVEL SELECTION
+========================= */
+.quiz-level-container{
+  max-width:500px;
+  margin:150px auto;
+  text-align:center;
+  background:#ffffff14;
+  backdrop-filter:blur(10px);
+  border-radius:20px;
+  padding:30px;
+  border:1px solid #ffffff22;
+}
+
+.level-card{
+  margin:20px 0;
+}
+
+.level-card a{
+  display:inline-block;
+  padding:14px 35px;
+  background:#00e0ff;
+  color:#000;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.level-card a:hover{
+  background:#00bcd4;
+}
+
+/* =========================
+   QUIZ PAGE
+========================= */
+.quiz-box{
+  background:#ffffff15;
+  max-width:700px;
+  margin:70px auto;
+  padding:35px;
+  border-radius:22px;
+  box-shadow:0 20px 45px rgba(0,0,0,0.45);
+}
+
+.quiz-box h2{
+  font-size:24px;
+  margin-bottom:25px;
+}
+
+/* =========================
+   OPTIONS
+========================= */
+.options{
+  display:grid;
+  gap:15px;
+}
+
+.option{
+  padding:15px;
+  border:none;
+  border-radius:14px;
+  background:#ffffff25;
+  color:#fff;
+  font-size:16px;
+  text-align:left;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.option:hover{
+  background:#00e0ff;
+  color:#000;
+}
+
+.option:active{
+  transform:scale(0.97);
+}
+
+/* =========================
+   OPTION STATES
+========================= */
+.option.correct{
+  background:#00ff9d !important;
+  color:#000;
+}
+
+.option.wrong{
+  background:#ff4d4d !important;
+  color:#fff;
+}
+
+.option.disabled{
+  pointer-events:none;
+  opacity:0.85;
+}
+
+/* =========================
+   QUIZ FOOTER
+========================= */
+.quiz-footer{
+  display:flex;
+  justify-content:space-between;
+  margin-top:25px;
+  font-size:16px;
+  opacity:0.9;
+}
+
+/* =========================
+   PROGRESS BAR
+========================= */
+.progress-bar{
+  margin-top:15px;
+  height:8px;
+  background:#ffffff30;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+#progressFill{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,#00e0ff,#00ffa2);
+  transition:0.4s;
+}
+
+/* =========================
+   RESULT PAGE
+========================= */
+.result-box{
+  background:#ffffff15;
+  max-width:480px;
+  margin:90px auto;
+  padding:40px;
+  border-radius:22px;
+  text-align:center;
+}
+
+.result-box h1{
+  margin-bottom:20px;
+}
+
+.result-box p{
+  font-size:18px;
+  margin:12px 0;
+}
+
+.result-box a{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 32px;
+  background:#00e0ff;
+  color:#000;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.play-again{
+  margin-top:15px;
+  padding:12px 32px;
+  border:none;
+  border-radius:30px;
+  background:#ff9800;
+  color:#000;
+  font-weight:600;
+  cursor:pointer;
+  display:none;
+}
+
+.play-again:hover{
+  background:#ffc107;
+}
+
+/* =========================
+   AUTH (LOGIN / SIGNUP)
+========================= */
+.auth-box{
+  background:#ffffff15;
+  max-width:420px;
+  margin:90px auto;
+  padding:40px;
+  border-radius:22px;
+  text-align:center;
+}
+
+.auth-box h2{
+  margin-bottom:25px;
+}
+
+.auth-box input{
+  width:100%;
+  padding:13px;
+  margin-bottom:15px;
+  border:none;
+  border-radius:10px;
+  outline:none;
+  font-size:15px;
+}
+
+.auth-box button{
+  width:100%;
+  padding:14px;
+  background:#00e0ff;
+  border:none;
+  border-radius:30px;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.auth-box button:hover{
+  background:#00bcd4;
+}
+
+.auth-link{
+  margin-top:15px;
+  font-size:14px;
+}
+
+.auth-link a{
+  color:#00e0ff;
+  text-decoration:none;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer{
+  text-align:center;
+  margin-top: 140px;
+  padding:20px;
+  opacity:0.8;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width:768px){
+  .main-header{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .l-h{
+    gap: 190px;
+  }
+
+  .nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .header h1{
+    font-size:32px;
+  }
+
+  .quiz-box{
+    margin:40px 15px;
+  }
+
+  .quiz-container{
+    padding:0 15px;
+  }
+
+  .auth-box, .admin-box{
+    margin:40px 15px;
+  }
+
+  .hamburger{
+    display: inline;
+  }
+
+  .nav-links{
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    flex-direction: column;
+    background: #203a43;
+    width: 50%;
+    padding: 15px;
+    border-radius: 4px;
+    border:1px solid #ffffff20;
+  }
+
+  .nav-links.show{
+    display: flex;
+  }
+}
