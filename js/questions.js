@@ -141,7 +141,10 @@ const questions = {
         options: ["<main>", "<content>", "<body>", "<section>"],
         answer: 0
       }
-    ]
+    ],
+
+    // ===== HTML LEVEL 3 =====
+3:  []
   },
 
   // ======================
@@ -531,3 +534,31 @@ const questions = {
     ]
   }
 };
+
+// HTML Level 3 = Level 1 + Level 2 mixed
+const Htmllevel1Questions = questions.html[1];
+const Htmllevel2Questions = questions.html[2];
+
+// combine
+let Htmllevel3Questions = [...Htmllevel1Questions, ...Htmllevel2Questions];
+
+// shuffle function
+Htmllevel3Questions.sort(() => Math.random() - 0.5);
+
+// assign to level 3
+questions.html[3] = Htmllevel3Questions;
+
+
+
+// CSS Level 3 = Level 1 + Level 2 mixed
+const CSSlevel1Questions = questions.css[1];
+const CSSlevel2Questions = questions.css[2];
+
+// combine
+let CSSlevel3Questions = [...CSSlevel1Questions, ...CSSlevel2Questions];
+
+// shuffle function
+CSSlevel3Questions.sort(() => Math.random() - 0.5);
+
+// assign to level 3
+questions.css[3] = CSSlevel3Questions;
