@@ -286,6 +286,10 @@ body{
   opacity:0.85;
 }
 
+/* =========================
+   QUIZ TIMER
+========================= */
+
 .quiz-timer {
   position: absolute;
   top: 25px;
