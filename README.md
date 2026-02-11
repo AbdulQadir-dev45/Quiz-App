@@ -25,4 +25,4 @@ The app provides instant feedback and shows the final score at the end of the qu
 
 ## Live Demo:
 
-quiz-app-tau-black.vercel.app
+https://quiz-app-tau-black.vercel.app
