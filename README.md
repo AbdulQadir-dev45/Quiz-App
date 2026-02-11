@@ -20,3 +20,9 @@ The app provides instant feedback and shows the final score at the end of the qu
 - HTML  
 - CSS  
 - JavaScript
+
+---
+
+## Live Demo:
+
+quiz-app-tau-black.vercel.app
