@@ -10,7 +10,7 @@ const level = params.get("level");
 
 const quizQuestions = questions[subject][level];
 
-let index = 0, score = 0, time = 15, timer;
+let index = 0, score = 0, time = 20, timer;
 
 const q = document.getElementById("question");
 const opts = document.querySelectorAll(".option");
@@ -80,7 +80,7 @@ function startTimer() {
 
 function resetTimer() {
   clearInterval(timer);
-  time = 15;
+  time = 20;
   startTimer();
 }
 
